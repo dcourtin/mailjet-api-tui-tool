@@ -1,0 +1,5 @@
+__pycache__
+mailjet_accounts.db
+exports
+.claude
+.venv
