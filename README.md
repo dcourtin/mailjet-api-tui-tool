@@ -6,7 +6,7 @@ Un dashboard terminal (TUI) pour visualiser, filtrer et analyser vos envois Mail
 
 ## Prérequis
 
-- Python 3.10+
+- Python 3.9+
 - Un compte [Mailjet](https://app.mailjet.com) avec une clé API (facultatif — un mode mock est disponible)
 
 ---
