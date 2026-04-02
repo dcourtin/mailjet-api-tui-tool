@@ -24,10 +24,7 @@ source .venv/bin/activate       # macOS / Linux
 # .venv\Scripts\activate        # Windows
 
 # 3. Installer les dépendances
-pip install mailjet-rest textual textual-plotext plotext python-dotenv
-
-# 4. Initialiser la base de données
-cp mailjet_accounts.db.example mailjet_accounts.db
+pip install mailjet-rest textual textual-plotext plotext
 ```
 
 ---
@@ -37,6 +34,8 @@ cp mailjet_accounts.db.example mailjet_accounts.db
 ```bash
 python app.py
 ```
+
+La base de données `mailjet_accounts.db` est créée automatiquement au premier lancement.
 
 ---
 
@@ -83,13 +82,11 @@ Vous pouvez ajouter autant de comptes que nécessaire et basculer entre eux via 
 
 ```
 Mailjet_Py/
-├── app.py                    # Application TUI principale
-├── mailjet_api.py            # Client API Mailjet + mode mock
-├── accounts_db.py            # Gestion des comptes (SQLite)
-├── mailjet_accounts.db       # Base de données locale (ignorée par git)
-├── mailjet_accounts.db.example  # Schéma vide à copier au setup
-├── debug_api.py              # Outil de diagnostic API (standalone)
-└── .env.example              # Non utilisé (conservé pour référence)
+├── app.py                 # Application TUI principale
+├── mailjet_api.py         # Client API Mailjet + mode mock
+├── accounts_db.py         # Gestion des comptes (SQLite)
+├── mailjet_accounts.db    # Base de données locale (créée auto, ignorée par git)
+└── debug_api.py           # Outil de diagnostic API (standalone)
 ```
 
 ---
