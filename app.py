@@ -483,7 +483,9 @@ class MailjetApp(App):
 
         fmt = self.query_one("#export-format", Select).value
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"mailjet_export_{timestamp}.{fmt}"
+        export_dir = Path(__file__).parent / "exports"
+        export_dir.mkdir(exist_ok=True)
+        filename = export_dir / f"mailjet_export_{timestamp}.{fmt}"
         fields = ["time", "sender", "recipient", "status", "subject"]
 
         try:
